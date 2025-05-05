@@ -13,6 +13,7 @@ import Condition from "./view/conditions/Condition";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
+  
      <Routes>
        <Route path="/Login" element={<Login />} />
        <Route path="/Register" element={<Register />} />
@@ -21,10 +22,11 @@ createRoot(document.getElementById("root")).render(
        <Route path="/Courses" element={<Courses />} />
        <Route path="/Doudt" element={<Doudt />} />
        <Route path="/Notes" element={<Notes />} />
-       
+
        <Route path="/Condition" element={<Condition />} />
        <Route path="/Feedback" element={<Feedback />} />
      </Routes>
+
   </BrowserRouter>
 );
 
