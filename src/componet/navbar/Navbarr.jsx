@@ -1,5 +1,5 @@
-import { createRoot } from "react-dom/client";
 import React from "react";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faHouse,
@@ -12,43 +12,37 @@ import {
 import "./../navbar/Navbar.css";
 import mainlogo from './../../images/main-logo.png';
 
-const root = createRoot(document.getElementById("root"));
-
 export function Navbar() {
     return (
         <div className="navbar-container">
             <img src={mainlogo} alt="project-logo" className="main-logo" />
             <div className="navbar-heads">
-                <a href="#">
+                <Link to="#" className="link-nav">
                     <span className="navbar-link">
                         <FontAwesomeIcon icon={faHouse} className="navbar-icon" /> Home
                     </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/Courses" className="link-nav">
                     <span className="navbar-link">
                         <FontAwesomeIcon icon={faBook} className="navbar-icon" /> Courses
                     </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/Notes" className="link-nav">
                     <span className="navbar-link">
                         <FontAwesomeIcon icon={faFileAlt} className="navbar-icon" /> Notes
                     </span>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/Doubt" className="link-nav">
                     <span className="navbar-link">
                         <FontAwesomeIcon icon={faQuestionCircle} className="navbar-icon" /> Doubt
                     </span>
-                </a>
-                <a href="">
+                </Link>
+                <Link to="/Feedback" className="link-nav">
                     <span className="navbar-link">
                         <FontAwesomeIcon icon={faCommentDots} className="navbar-icon" /> Feedback
                     </span>
-                </a>
+                </Link>
             </div>
         </div>
     );
 }
-
-root.render(
-    <> </>
-);

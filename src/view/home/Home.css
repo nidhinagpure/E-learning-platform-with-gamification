@@ -1,0 +1,10 @@
+.thought{
+    font-size: 25px;
+    background-color:#393E46;
+    color: #DFD0B8;
+}
+.thought-container{
+    display: block;
+    margin-top: 46px;
+    margin-left: 36%;
+}
