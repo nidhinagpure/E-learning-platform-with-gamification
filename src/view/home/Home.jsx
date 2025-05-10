@@ -1,7 +1,7 @@
 import React from 'react';
 import './../home/Home.css';
 import { Navbar } from './../../componet/navbar/Navbarr';
-
+import { Headsection }  from './../../componet/headsection/Headsection';
 import { Button } from './../../componet/button/Button';
 
 const HomePage = () => {
@@ -11,9 +11,7 @@ const HomePage = () => {
       <div>
 
         <div>
-          <p>Quality courses at affordable pricing, <br></br>trusted by 2000+ students.</p>
-          <p>We help you to learn the latest technologies and tools to kickstart your career in tech.</p>
-          <p>Learn, Practice, Master and Achieve.</p>
+          <Headsection />
           <Button />
         </div>
 
@@ -23,7 +21,6 @@ const HomePage = () => {
 
 
         </div>
-
       </div>
       
     </div>
