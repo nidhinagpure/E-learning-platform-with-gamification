@@ -8,3 +8,19 @@
     margin-top: 46px;
     margin-left: 36%;
 }
+.box-container{
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+    .box-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .thought {
+      font-size: 1.2rem;
+    }
+  }
