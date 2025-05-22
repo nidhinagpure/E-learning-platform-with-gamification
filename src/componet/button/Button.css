@@ -10,3 +10,17 @@
     border-radius: 6px 6px 6px 6px;
     font-size: 22px;
 }
+.action-button:hover {
+    background-color: #4b505a;
+}
+
+/* Responsive font and padding on smaller screens */
+@media (max-width: 600px) {
+    .action-button {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+    }
+    .action-button{
+        font-size: 24px;
+    }
+}

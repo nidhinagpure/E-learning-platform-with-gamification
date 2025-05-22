@@ -14,13 +14,70 @@
     justify-content: space-evenly;
 }
 
-@media (max-width: 768px) {
-    .box-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
+/* Small mobile devices: <600px */
+@media (max-width: 599px) {
     .thought {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
-  }
+
+    .thought-container {
+        margin-top: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+}
+
+/* Normal mobile devices: 600px–767px */
+@media (min-width: 600px) and (max-width: 767px) {
+    .thought {
+        font-size: 1.3rem;
+    }
+
+    .thought-container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Tablets: 768px–991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .thought {
+        font-size: 1.4rem;
+    }
+
+    .thought-container {
+        margin-left: 20%;
+    }
+
+    .box-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+/* Laptops / Desktops: 992px–1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .thought {
+        font-size: 1.5rem;
+    }
+
+    .thought-container {
+        margin-left: 30%;
+    }
+
+    .box-container {
+        justify-content: space-evenly;
+    }
+}
