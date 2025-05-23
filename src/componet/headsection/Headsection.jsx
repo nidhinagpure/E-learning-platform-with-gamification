@@ -1,4 +1,3 @@
-import React from 'react';
 import './../../componet/button/Button.css';
 import './../../componet/headsection/Headsection.css';
 
@@ -12,8 +11,8 @@ export function Headsection() {
           <span className="thrid-title">Learn, Practice, Master and Achieve.</span>
         </div>
         <div className='header-button'>
-          <button className="action-button header-btn">Courses</button>
-          <button className="action-button header-btn">Login</button>
+          <button className="action-button header-btn">🚀Courses</button>
+          <button className="action-button header-btn">🔐Login</button>
         </div>
     </>
   );

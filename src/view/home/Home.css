@@ -13,6 +13,11 @@
     display: flex;
     justify-content: space-evenly;
 }
+.Chooseus{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
 
 /* Small mobile devices: <600px */
 @media (max-width: 599px) {
@@ -30,6 +35,9 @@
         flex-direction: column;
         align-items: center;
         margin-top: 2rem;
+    }
+    .Chooseus {
+        font-size: 20px;
     }
 }
 
@@ -49,6 +57,9 @@
         flex-direction: column;
         align-items: center;
     }
+    .Chooseus {
+        font-size: 26px;
+    }
 }
 
 /* Tablets: 768px–991px */
@@ -65,6 +76,10 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    .info-div{
+    display: flex;
+    background-color: white;    
+}
 }
 
 /* Laptops / Desktops: 992px–1199px */
