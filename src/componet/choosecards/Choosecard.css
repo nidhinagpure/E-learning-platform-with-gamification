@@ -39,3 +39,86 @@
 .choose-lines{
     color: black;
 }
+
+@media screen and (min-width: 600px) and (max-width: 768px){
+
+    .fixed-box {
+    width: 90%; /* fluid width instead of fixed 400px */
+    height: auto; /* adjust height to fit content */
+    padding: 1rem;
+    margin-top: 30px;
+  }
+
+  .choose-content {
+    flex-direction: column; /* stack image and text vertically */
+    align-items: flex-start;
+  }
+
+  .choose-title {
+    font-size: 16px;
+    padding-left: 0;
+    padding-top: 8px;
+  }
+
+  .choose-image {
+    height: 40px;
+    width: 40px;
+    padding: 6px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .fixed-box {
+    width: 90%;
+    height: auto;
+    padding: 1rem 12px;
+    margin-top: 40px;
+  }
+
+  .choose-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .choose-title {
+    font-size: 17px;
+    padding-left: 0;
+    padding-top: 6px;
+  }
+
+  .choose-image {
+    height: 45px;
+    width: 45px;
+    padding: 6px;
+  }
+
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+       .fixed-box {
+    width: 85%;           /* Slightly wider for desktops */
+    height: auto;         /* Let height adapt to content */
+    padding: 1rem 20px;
+    margin-top: 40px;
+  }
+
+  .choose-content {
+    gap: 16px;            /* Add space between image and text */
+  }
+
+  .choose-title {
+    font-size: 17px;      /* Slight size reduction for balance */
+    padding-left: 0;
+    padding-top: 6px;
+  }
+
+  .choose-image {
+    height: 48px;
+    width: 48px;
+    padding: 6px;
+  }
+
+}
+
