@@ -5,7 +5,7 @@ import { Headsection } from './../../componet/headsection/Headsection';
 import { Headerdiv } from './../../componet/headsection/Headsection';
 import { Information } from './../../componet/infromation/Information';
 import Chooseus from './../../componet/infromation/Information';
-import Chooseuscards from './../../componet/chooseuscards/Chooseuscards';
+import Choosecards from './../../componet/chooseuscards/Chooseuscards';
 
 import Video from './../../images/headersection/video-lesson.png';
 import Practice from './../../images/headersection/practice.webp';
@@ -41,6 +41,9 @@ const HomePage = () => {
         <Information image={Baches} plusnum="30+" about="Completed Batches" />
       </div>
       <div className="Chooseus"><Chooseus /></div>
+      <div className="cars-maping">
+        <Choosecards/>
+      </div>
     </div>
   );
 };

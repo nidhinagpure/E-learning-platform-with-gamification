@@ -60,6 +60,14 @@
     .Chooseus {
         font-size: 26px;
     }
+
+    .cars-maping{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 50px;
+        
+    }
 }
 
 /* Tablets: 768px–991px */
