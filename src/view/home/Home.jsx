@@ -6,6 +6,8 @@ import { Headerdiv } from './../../componet/headsection/Headsection';
 import { Information } from './../../componet/infromation/Information';
 import Chooseus from './../../componet/infromation/Information';
 import Choosecards from './../../componet/chooseuscards/Chooseuscards';
+import Interslider from './../../componet/interslider/Interslider';
+
 
 import Video from './../../images/headersection/video-lesson.png';
 import Practice from './../../images/headersection/practice.webp';
@@ -44,6 +46,9 @@ const HomePage = () => {
       <div className="cars-maping">
         <Choosecards/>
       </div>
+      <div>
+        <Interslider/>
+        </div>
     </div>
   );
 };

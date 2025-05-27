@@ -19,4 +19,7 @@ export function Choosecard({ imageUrl, title, information }) {
     );
 }
 
+
+
+
 export default Choosecard;

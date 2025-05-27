@@ -6,13 +6,14 @@ import Affordable from './../../images/choosecards/affordable.png';
 import Live from './../../images/choosecards/affordable.png';
 import Recorded from './../../images/choosecards/recording.png';
 import Doubt from './../../images/choosecards/doudt.png';
-import Language  from './../../images/choosecards/language.png';
+import Language from './../../images/choosecards/language.png';
 import Notes from './../../images/choosecards/notes.png';
 import Feedback from './../../images/choosecards/feedback.png';
 import Group from './../../images/choosecards/group.png';
 import Resume from './../../images/choosecards/resume.png';
 import Interviews from './../../images/choosecards/interview.png';
 import Network from './../../images/choosecards/network.png';
+import Code from './../../images/choosecards/code.png';
 
 const CARDS = [
   {
@@ -22,7 +23,7 @@ const CARDS = [
   },
   {
     imageUrl: Live,
-    title: "Live interactive classes",
+    title: "Live Interactive Classes",
     information: "Attend live class and get your doubts cleared by the instructor in real-time just like a physical classroom. No boring pre-recorded videos.",
   },
   {
@@ -47,7 +48,7 @@ const CARDS = [
   },
   {
     imageUrl: Feedback,
-    title: "Assignments and Feedback",
+    title: "Assignments & Feedback",
     information: "Weekly 4-5 assignments and feedback from the instructor to keep you on track.",
   },
   {
@@ -66,9 +67,14 @@ const CARDS = [
     information: "Get prepared for the job interviews with our mock interviews and feedback from the industry experts.",
   },
   {
-    imageUrl:Network,
+    imageUrl: Network,
     title: "Professional Network",
     information: "Unlock opportunities by learning correct way of using Peerlist and LinkedIn for hunting jobs and internships.",
+  },
+  {
+    imageUrl: Code,
+    title: "Practic, Learn, Grow",
+    information: "Practice each day with dedication,Let your effort shape your journey,Become better than you were yesterday.",
   },
 ]
 
@@ -76,20 +82,22 @@ const CARDS = [
 function Choosecards() {
   return (
     <>
-      <div className="cards-map">
-        {CARDS.map((card) => {
-          return (
-            <Choosecard imageUrl={card.imageUrl} title={card.title} information={card.information} />)
-        })
-
-        }
+      <div>
+        <div className="cards-map">
+          {CARDS.map((card) => {
+            return (
+              <Choosecard imageUrl={card.imageUrl}
+                title={card.title}
+                information={card.information} />)
+          })
+          }
+        </div>
       </div>
-
     </>
 
   );
-}
 
+}
 export default Choosecards;
 
 
