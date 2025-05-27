@@ -1,0 +1,109 @@
+
+
+import './../../componet/courses/Courses.css';
+
+import Aws from './../../images/coursescard/aws.jpg';
+import Internship from './../../images/coursescard/icp.jpg';
+import Python from './../../images/coursescard/python.jpg';
+
+import  Vaibhavimam from './../../images/coursescard/vaishavimam.jpg';
+import  Nidhimam from './../../images/coursescard/nidhimam.jpg';
+import  Sushmitamam from './../../images/coursescard/sushmitamam.jpg';
+
+
+const COURSES = [
+    {
+        courseimage: Aws,
+        coursename: "AWS and DevOps For Beginners",
+        coueseinfo: "Learn AWS and DevOps from Scratch and Kickstart your career in and DevOps 🚀",
+        coursedate: "🗓️ Starting from 9th June 2025",
+        coursetime: "⏱️ 6:00 PM - 7:00 PM",
+        courseavatar: Vaibhavimam,
+        courseInstructor: "Vaibhavi Hole",
+        courseprice: "₹ 2999/-"
+    },
+    {
+        courseimage: Internship,
+        coursename: "Internship Cohort Program 13.0",
+        coueseinfo: "Learn Fullstack Development and Become Internship Ready in Just 8 Months 🚀",
+        coursedate: "🗓️ Starting from 16th June 2025",
+        coursetime: "⏱️ 7:00 PM - 8:00 PM",
+        courseavatar: Nidhimam,
+        courseInstructor: "Suraj Shende",
+        courseprice: "₹ 2999/-",
+    },
+    {
+        courseimage: Python,
+        coursename: "Python Programming",
+        coueseinfo: "Learn Python Programming from Scratch and Master the concepts of Python Programming 🚀",
+        coursedate: "🗓️ Starting from 23rd June 2025",
+        coursetime: "⏱️ 7:00 PM - 8:00 PM",
+        courseavatar: Sushmitamam,
+        courseInstructor: "Vaishnavi Hole",
+        courseprice: "₹ 999/-",
+    },
+];
+
+
+function Courses(props) {
+    const { courseimage,
+        coursename,
+        coueseinfo,
+        coursedate,
+        coursetime,
+        courseavatar,
+        courseInstructor,
+        courseprice } = props;
+    return (
+        <>
+            <div className="course-container">
+                <img src={courseimage} alt="image" className="course-image"></img>
+                <p className="course-name"> {coursename} </p>
+                <p className="course-info"> {coueseinfo} </p>
+                <p className="course-date"> {coursedate} </p>
+                <p className="course-date"> {coursetime} </p>
+                <div className="hr-line"></div>
+                <span  className="instructor">Instructor</span>
+                  <div className="hr-line"></div>
+                <div className="instructor-conatiner">
+                    <img src={courseavatar} alt="image" className="courese-avatar"></img>
+                    <span><p className="course-instructor">{courseInstructor}</p></span>   
+                </div>
+                    <div className="hr-line"></div>
+                <span className="course-price">{courseprice}</span>
+                     <div className="hr-line"></div>
+            </div>
+
+        </>
+
+    );
+}
+
+export default function Coursescards() {
+    return (
+        <>
+          <span className="course-polular"><p className="course-most">Our Most <span className="course">Popular Courses</span></p></span>
+            <div className="course-content">
+                <div className="content" >
+                    {COURSES.map((coursedata) => {
+                        return (
+                            <Courses courseimage={coursedata.courseimage}
+                                coursename={coursedata.coursename}
+                                coueseinfo={coursedata.coueseinfo}
+                                coursedate={coursedata.coursedate}
+                                coursetime={coursedata.coursetime}
+                                courseavatar={coursedata.courseavatar}
+                                courseInstructor={coursedata.courseInstructor}
+                                courseprice={coursedata.courseprice} />
+                        )
+                    }
+                    )}
+
+                </div>
+
+            </div>
+
+        </>
+
+    );
+}

@@ -18,6 +18,10 @@
     font-size: 32px;
     font-weight: bold;
 }
+.course-cards{
+   margin: 10px;
+}  
+
 
 /* Small mobile devices: <600px */
 @media (max-width: 599px) {
