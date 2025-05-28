@@ -25,7 +25,7 @@ export function Navbar() {
                 </Link>
                 <Link to="/Courses" className="link-nav">
                     <span className="navbar-link">
-                        <FontAwesomeIcon icon={faBook} className="navbar-icon" /> Courses
+                        <FontAwesomeIcon icon={faBook} className="navbar-icon" /> Intership
                     </span>
                 </Link>
                 <Link to="/Notes" className="link-nav">

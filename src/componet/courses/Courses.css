@@ -1,6 +1,8 @@
 .course-container {
-    height: 580px;
+    height: 630px;
     width: 420px;
+    background-color: rgb(245, 242, 242);
+
     margin: 0 10px 0 10px;
     border: none;
     flex-direction: row;
@@ -15,7 +17,6 @@
 .content{
     margin: 10px;
     display: flex;
-    
 }
 .course-most{
     color: rgb(146, 139, 139);
@@ -55,13 +56,13 @@
 .course-info {
     font-size: 14px;
     padding: 0 16px 0 26px;
-    color: #393E46;
+    color: black;
 }
 
 .course-date {
     font-size: 18px;
     padding: 0 16px 0 26px;
-    color: #393E46;
+    color: black;
 }
 
 .instructor-conatiner {
@@ -114,4 +115,8 @@
     margin-bottom: 2px;
     font-size: 22px;
     margin-left: 38%;
+}
+.btn-course{
+    display: flex;
+    margin: 18px 36%;
 }

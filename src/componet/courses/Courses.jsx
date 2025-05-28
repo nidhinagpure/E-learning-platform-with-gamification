@@ -1,18 +1,23 @@
 
-
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './../../componet/courses/Courses.css';
+import './../../componet/button/Button.css';
+
 
 import Aws from './../../images/coursescard/aws.jpg';
 import Internship from './../../images/coursescard/icp.jpg';
 import Python from './../../images/coursescard/python.jpg';
 
-import  Vaibhavimam from './../../images/coursescard/vaishavimam.jpg';
-import  Nidhimam from './../../images/coursescard/nidhimam.jpg';
-import  Sushmitamam from './../../images/coursescard/sushmitamam.jpg';
+import Vaibhavimam from './../../images/coursescard/vaishavimam.jpg';
+import Nidhimam from './../../images/coursescard/nidhimam.jpg';
+import Sushmitamam from './../../images/coursescard/sushmitamam.jpg';
 
 
 const COURSES = [
     {
+        id: 1,
+        slug: 'aws',
         courseimage: Aws,
         coursename: "AWS and DevOps For Beginners",
         coueseinfo: "Learn AWS and DevOps from Scratch and Kickstart your career in and DevOps 🚀",
@@ -23,6 +28,8 @@ const COURSES = [
         courseprice: "₹ 2999/-"
     },
     {
+        id: 2,
+        slug: 'fullstack',
         courseimage: Internship,
         coursename: "Internship Cohort Program 13.0",
         coueseinfo: "Learn Fullstack Development and Become Internship Ready in Just 8 Months 🚀",
@@ -33,6 +40,8 @@ const COURSES = [
         courseprice: "₹ 2999/-",
     },
     {
+        id: 3,
+        slug: 'Python',
         courseimage: Python,
         coursename: "Python Programming",
         coueseinfo: "Learn Python Programming from Scratch and Master the concepts of Python Programming 🚀",
@@ -42,11 +51,12 @@ const COURSES = [
         courseInstructor: "Vaishnavi Hole",
         courseprice: "₹ 999/-",
     },
-];
+]
+
 
 
 function Courses(props) {
-    const { courseimage,
+    const { id, slug, courseimage,
         coursename,
         coueseinfo,
         coursedate,
@@ -63,38 +73,68 @@ function Courses(props) {
                 <p className="course-date"> {coursedate} </p>
                 <p className="course-date"> {coursetime} </p>
                 <div className="hr-line"></div>
-                <span  className="instructor">Instructor</span>
-                  <div className="hr-line"></div>
+                <span className="instructor">Instructor</span>
+                <div className="hr-line"></div>
                 <div className="instructor-conatiner">
                     <img src={courseavatar} alt="image" className="courese-avatar"></img>
-                    <span><p className="course-instructor">{courseInstructor}</p></span>   
+                    <span><p className="course-instructor">{courseInstructor}</p></span>
                 </div>
-                    <div className="hr-line"></div>
+                <div className="hr-line"></div>
                 <span className="course-price">{courseprice}</span>
-                     <div className="hr-line"></div>
+                <div className="hr-line"></div>
+                <Knowmorebtn id={id} slug={slug} />
             </div>
-
         </>
 
     );
 }
+ function CoursePage() {
+    const { slug } = useParams();
+
+    switch (slug.toLowerCase()) {
+        case 'aws':
+            return <Awsmore />;
+        case 'fullstack':
+            return <Fullmore />;
+        case 'python':
+            return <Pythonmore />;
+        default:
+            return <div>Course not found</div>;
+    }
+}
+function Knowmorebtn({ id, slug }) {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/course/${id}/${slug}`);
+    };
+    return (
+        <div className="btn-course">
+            <button onClick={handleClick} className="action-button">Know More</button>
+        </div>
+    )
+}
+
 
 export default function Coursescards() {
     return (
         <>
-          <span className="course-polular"><p className="course-most">Our Most <span className="course">Popular Courses</span></p></span>
+            <span className="course-polular"><p className="course-most">Our Most <span className="course">Popular Courses</span></p></span>
             <div className="course-content">
                 <div className="content" >
                     {COURSES.map((coursedata) => {
                         return (
-                            <Courses courseimage={coursedata.courseimage}
+                            <Courses key={coursedata.id} courseimage={coursedata.courseimage}
                                 coursename={coursedata.coursename}
                                 coueseinfo={coursedata.coueseinfo}
                                 coursedate={coursedata.coursedate}
                                 coursetime={coursedata.coursetime}
                                 courseavatar={coursedata.courseavatar}
                                 courseInstructor={coursedata.courseInstructor}
-                                courseprice={coursedata.courseprice} />
+                                courseprice={coursedata.courseprice}
+                                id={coursedata.id}
+                                slug={coursedata.slug}
+                            />
                         )
                     }
                     )}
