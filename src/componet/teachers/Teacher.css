@@ -1,0 +1,90 @@
+.teach-map {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.teacher-container {
+    height: 180px;
+    width: 200px;
+    background-color: rgb(245, 242, 242);
+    border: 2px rgb(183, 185, 189) solid;
+    border-radius: 4px;
+    position: relative;
+
+}
+
+.teach-image {
+    height: 90px;
+    width: 90px;
+    border: 2px rgb(183, 185, 189) solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 50px;
+    top: -50px;
+}
+
+.teach-name {
+    font-size: 20px;
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.teach-ins {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.teach-job {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.job-image {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.teach-heading {
+    font-weight: bold;
+    margin-top: 90px;
+    font-size: 32px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.teach-content {
+    align-items: center;
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    word-spacing: 3px;
+    font-weight: bold;
+    color: grey;
+
+}
+.teach-team{
+    background-color: rgb(236, 162, 162);
+    margin-left: 12px;
+    color: black;
+    text-decoration: wavy underline rgb(218, 39, 39);
+}
+
+.click-teach {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.click-teach:hover {
+    color: blue;
+    text-decoration: underline;
+}

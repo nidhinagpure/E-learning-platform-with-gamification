@@ -82,7 +82,7 @@ function Courses(props) {
                 <div className="hr-line"></div>
                 <span className="course-price">{courseprice}</span>
                 <div className="hr-line"></div>
-                <Knowmorebtn id={id} slug={slug} />
+                 <Knowmorebtn id={id} slug={slug} />
             </div>
         </>
 

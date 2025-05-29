@@ -8,6 +8,7 @@ import Chooseus from './../../componet/infromation/Information';
 import Choosecards from './../../componet/chooseuscards/Chooseuscards';
 import Interslider from './../../componet/interslider/Interslider';
 import Coursescards from './../../componet/courses/Courses';
+import Teachercard from './../../componet/teachers/Teacher';
 
 
 import Video from './../../images/headersection/video-lesson.png';
@@ -52,6 +53,9 @@ const HomePage = () => {
         </div>
         <div className="course-cards">
         < Coursescards/>
+        </div>
+        <div>
+          <Teachercard/>
         </div>
     </div>
   );
