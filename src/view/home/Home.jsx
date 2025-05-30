@@ -9,6 +9,7 @@ import Choosecards from './../../componet/chooseuscards/Chooseuscards';
 import Interslider from './../../componet/interslider/Interslider';
 import Coursescards from './../../componet/courses/Courses';
 import Teachercard from './../../componet/teachers/Teacher';
+import Footer from './../../componet/footer/Footer';
 
 
 import Video from './../../images/headersection/video-lesson.png';
@@ -24,7 +25,7 @@ import Baches from './../../images/information/baches.png';
 
 const HomePage = () => {
   return (
-    <div style={{ padding: '2rem' }}>
+    <div>
       <Navbar />
 
       <div className="box-container">
@@ -56,6 +57,9 @@ const HomePage = () => {
         </div>
         <div>
           <Teachercard/>
+        </div>
+        <div>
+          <Footer />
         </div>
     </div>
   );
